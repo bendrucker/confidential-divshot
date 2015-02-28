@@ -1,0 +1,43 @@
+{
+  "name": "confidential-divshot",
+  "version": "0.0.1",
+  "description": "Hierarchical configuration loading and parsing for divshot",
+  "main": "./src",
+  "scripts": {
+    "test": "tape test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendrucker/confidential-divshot.git"
+  },
+  "keywords": [
+    "divshot",
+    "environment",
+    "configuration"
+  ],
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendrucker/confidential-divshot/issues"
+  },
+  "homepage": "https://github.com/bendrucker/confidential-divshot",
+  "devDependencies": {
+    "browserify": "~9.0.3",
+    "mocha": "~2.1.0",
+    "tape": "~3.5.0"
+  },
+  "dependencies": {
+    "babelify": "~5.0.3",
+    "browserify-shim": "~3.8.3",
+    "confidential": "0.0.1"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "divshot-env": "global:__env"
+  }
+}
